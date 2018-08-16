@@ -6,9 +6,9 @@ module.exports = {
   },
   pages: {
     account: {
-      entry: 'src/main.ts',
-      template: 'public/index.1.html',
-      filename: 'account.html',
+      entry: 'src/account/index.ts',
+      template: 'public/account.html',
+      filename: 'account/index.html',
       title: 'account'
     },
     index: {

@@ -1,17 +1,15 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Router, { Route } from 'vue-router'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'home'
     },
     {
       path: '/about',
@@ -24,3 +22,13 @@ export default new Router({
     }
   ]
 })
+var a: any = null
+router.beforeEach((from: Route, to: Route, next: Function) => {
+  if (a == null) {
+    next({ path: '/account/' })
+  } else {
+    next()
+  }
+})
+
+export default router
