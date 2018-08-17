@@ -22,10 +22,12 @@ const router = new Router({
     }
   ]
 })
-var a: any = null
+var a: string | null = window.localStorage.getItem('login')
 router.beforeEach((from: Route, to: Route, next: Function) => {
-  if (a == null) {
-    next({ path: '/account/' })
+  console.log(a)
+  if (!a) {
+    // history.pushState({}, 'account', '/account/')
+    window.location.href = '/account/'
   } else {
     next()
   }
