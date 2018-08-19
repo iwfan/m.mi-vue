@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router, { Route } from 'vue-router'
+import Home from '@/views/Home.vue'
 
 Vue.use(Router)
 
@@ -9,7 +10,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home'
+      name: 'home',
+      component: Home
     },
     {
       path: '/about',
@@ -28,6 +30,7 @@ router.beforeEach((from: Route, to: Route, next: Function) => {
   if (!a) {
     // history.pushState({}, 'account', '/account/')
     window.location.href = '/account/'
+    // next()
   } else {
     next()
   }
