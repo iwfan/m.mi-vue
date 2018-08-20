@@ -15,6 +15,15 @@
       fieldset.other__wrapper
         legend.other__title(align="center") 其他方式登录
       .other__type__link
+        a.login__link.qq
+          svg.icon(aria-hidden="true")
+            use(xlink:href="#icon-qq")
+        a.login__link.weibo
+          svg.icon(aria-hidden="true")
+            use(xlink:href="#icon-weibo")
+        a.login__link.alipay
+          svg.icon(aria-hidden="true")
+            use(xlink:href="#icon-zhifubao")
 </template>
 
 <script lang="ts">
@@ -48,6 +57,7 @@ export default class HelloWorld extends Vue {
     padding 30px 28px 0
     .header
       text-align center
+      margin-bottom 10px
       &__logo
         margin-bottom 15px
       &__title
@@ -57,7 +67,24 @@ export default class HelloWorld extends Vue {
       .other__wrapper
         border none
         border-top 1px solid #f2f2f2
-      .other__title
-        font-size 12px
-        color #b0b0b0
+        .other__title
+          font-size 12px
+          color #b0b0b0
+      .other__type__link
+        text-align center
+        .login__link
+          display inline-block
+          width 30px
+          height 30px
+          border-radius 50%
+          font-size 25px
+          margin 0 10px
+          color white
+          cursor pointer
+          &.qq
+            background #72c7db
+          &.weibo
+            background #ed9090
+          &.alipay
+            background #6bb6ea
 </style>
