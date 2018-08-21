@@ -1,10 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/image/logo.png">
-    <HelloWorld 
-      msg="Welcome to Your Vue.js + TypeScript App"
-      @testEmit="t"
-      />
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
@@ -17,14 +14,5 @@ import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
     HelloWorld
   }
 })
-export default class Home extends Vue {
-  constructor() {
-    super()
-    console.log(this)
-  }
-  t() {
-    console.log('event')
-    let str = '12'
-  }
-}
+export default class Home extends Vue {}
 </script>
