@@ -6,11 +6,10 @@
         width="48"
         height="48")
       h4.header__title 小米账号登录
-    .account__form
-      component(
-        :is="loginType === 0 ? 'SignInWithUserName' : 'SignInWithPhoneNumber'"
-        :type.sync="loginType"
-      )
+    component(
+      :is="loginType === 0 ? 'SignInWithUserName' : 'SignInWithPhoneNumber'"
+      :type.sync="loginType"
+    )
     .account__other
       fieldset.other__wrapper
         legend.other__title(align="center") 其他方式登录
@@ -63,7 +62,24 @@ export default class HelloWorld extends Vue {
       &__title
         font-size 18px
         font-weight normal
+    & >>> .account__form
+      .form__input
+        // padding 10px 0
+        border-bottom 1px solid #d3d3d3
+        input
+          width 100%
+          font-size 18px
+          font-weight 400
+          height 21px
+          padding 16px 0
+          color #4a4a4a
+      .form__btn
+        display block
+        width 100%
+        height 45px
+        margin-top 24px
     .account__other
+      margin-top 40px
       .other__wrapper
         border none
         border-top 1px solid #f2f2f2

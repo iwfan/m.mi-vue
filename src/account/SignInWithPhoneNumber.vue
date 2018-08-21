@@ -1,4 +1,5 @@
 <template lang="pug">
+.account__form
   section 电话登陆
     button(@click="$emit('update:type', 0)") switch 
 </template>
