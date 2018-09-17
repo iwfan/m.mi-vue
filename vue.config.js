@@ -10,8 +10,7 @@ module.exports = {
       entry: 'src/account/index.ts',
       template: 'public/account.html',
       filename: 'account/index.html',
-      title: '账户',
-      tpl: `<h1>tpl</h1>`
+      title: '账户'
     },
     index: {
       entry: 'src/main.ts',

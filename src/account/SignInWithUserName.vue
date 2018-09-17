@@ -14,11 +14,13 @@
       placeholder="密码"
       autocomplete="off"
     )
-    span
+    span(
+      @click="showPassword = !showPassword"
+    )
       svg.icon(aria-hidden="true")
-        use(xlink:href="#icon-chakanmima")
+        use(:xlink:href="`#icon-${ showPassword ? 'chakanmima1' : 'chakanmima' }`")
   button.form__btn.login__btn(
-
+    @click.stop=""
   ) 登录
   button.form__btn.switch__loginType(
     @click.stop="$emit('update:type', 1)"
@@ -44,6 +46,8 @@ export default class HelloWorld extends Vue {
   input
     flex 1
   span
+    margin-right 5px
+    font-size 20px
     width 20px
-    line-height 50px
+    line-height 54px
 </style>
